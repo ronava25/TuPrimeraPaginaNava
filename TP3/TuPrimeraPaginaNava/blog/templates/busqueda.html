@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block title %}Buscar Cliente{% endblock %}
+{% block contenido %}
+<h2>Buscar Cliente por nombre</h2>
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Buscar</button>
+</form>
+
+{% if resultado %}
+    <h3>Resultados:</h3>
+    <ul>
+        {% for cliente in resultado %}
+        <li>{{ cliente.nombre }} - {{ cliente.email }}</li>
+        {% endfor %}
+    </ul>
+{% elif resultado is not none %}
+    <p>No se encontraron resultados.</p>
+{% endif %}
+{% endblock %}

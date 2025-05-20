@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Mi página{% endblock %}</title>
+</head>
+<body>
+    <h1>Sistema de Contratación</h1>
+    <nav>
+        <a href="/">Inicio</a> |
+        <a href="/cliente/">Agregar Cliente</a> |
+        <a href="/servicio/">Agregar Servicio</a> |
+        <a href="/contratacion/">Agregar Contratación</a> |
+        <a href="/buscar-cliente/">Buscar Cliente</a>
+    </nav>
+    <hr>
+    {% block contenido %}{% endblock %}
+</body>
+</html>
