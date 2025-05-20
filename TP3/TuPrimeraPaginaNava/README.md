@@ -1,4 +1,4 @@
-# TuPrimeraPaginaSerpa
+# TuPrimeraPaginaNava
 
 ## Descripción
 
@@ -7,14 +7,14 @@ Web desarrollada con Django que permite gestionar Clientes, Servicios y Contrata
 ## Instrucciones
 
 1. Instalar dependencias:
-    pip install django
+`pip install django`
 
 2. Migrar base de datos:
-    python manage.py makemigrations
-    python manage.py migrate
+`python manage.py makemigrations`
+`python manage.py migrate`
 
 3. Ejecutar el servidor:
-    python manage.py runserver
+`python manage.py runserver`
 
 4. Funcionalidades:
 
@@ -23,6 +23,6 @@ Web desarrollada con Django que permite gestionar Clientes, Servicios y Contrata
 - `/contratacion/` → Agregar contratación
 - `/buscar-cliente/` → Buscar cliente
 
-## Autor
+## Autoría
 
 Rocio Nava
