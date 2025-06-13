@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Sesión cerrada - PyShare{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h2>👋 ¡Sesión cerrada!</h2>
+    <p>Gracias por usar PyShare. ¡Nos vemos pronto!</p>
+    <a class="btn btn-primary mt-3" href="{% url 'home' %}">Volver al inicio</a>
+</div>
+{% endblock %}

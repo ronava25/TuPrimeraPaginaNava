@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Editar perfil{% endblock %}
+
+{% block content %}
+<div class="container mt-5 bg-dark text-light p-4 rounded shadow">
+  <h2 class="mb-4">Editar perfil</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+      <div class="alert alert-danger">
+        {% for error in form.non_field_errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if form.instance.avatar %}
+    <div class="mb-3">
+      <label class="form-label">Avatar actual:</label><br>
+      <img src="{{ form.instance.avatar.url }}" alt="Avatar actual" class="img-thumbnail mb-2" width="150">
+      {{ form.avatar.clear_checkbox }} {{ form.avatar.clear_checkbox.label_tag }}
+    </div>
+    {% endif %}
+
+    <div class="mb-3">
+      <label for="{{ form.avatar.id_for_label }}" class="form-label">Modificar avatar</label>
+      {{ form.avatar.as_widget }}
+      {% for error in form.avatar.errors %}
+        <div class="text-danger">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.email.label_tag }}
+      {{ form.email }}
+      {% for error in form.email.errors %}
+        <div class="text-danger">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.bio.label_tag }}
+      {{ form.bio }}
+      {% for error in form.bio.errors %}
+        <div class="text-danger">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <div class="mb-3">
+      {{ form.birth_date.label_tag }}
+      {{ form.birth_date }}
+      {% for error in form.birth_date.errors %}
+        <div class="text-danger">{{ error }}</div>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar cambios</button>
+    <a href="{% url 'profile' %}" class="btn btn-secondary ms-2">Cancelar</a>
+  </form>
+
+</div>
+{% endblock %}

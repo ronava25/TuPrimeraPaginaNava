@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - PyShare{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a PyShare 🐍</h1>
+    <p class="lead">Una red de desarrolladores Python donde podés compartir tus proyectos, explorar ideas y conectar con otros devs.</p>
+    <a href="{% url 'page_list' %}" class="btn btn-success">Explorar proyectos</a>
+</div>
+{% endblock %}

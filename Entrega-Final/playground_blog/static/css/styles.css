@@ -1,0 +1,104 @@
+body {
+    background-color: #272727;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #168e48;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover {
+    color: #e0e0e0 !important;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-danger {
+    color: #f44336;
+    border-color: #f44336;
+}
+
+.btn-outline-danger:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+a {
+    color: #90caf9;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.container {
+    padding-top: 2rem;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+}
+input, textarea, select {
+    background-color: #212529;
+    color: #f8f9fa;
+    border: 1px solid #495057;
+  }
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+  }
+
+form label {
+    color: #cccccc;
+}
+
+button, input[type="submit"] {
+    background-color: #168e48;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #12753b;
+}
+.message-container {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+
+.message-container .sender {
+    font-weight: bold;
+    color: #4ecdc4;
+}
+
+.message-container .timestamp {
+    font-size: 0.9rem;
+    color: #888;
+}
+.project-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+img.rounded-circle {
+    border: 2px solid #168e48;
+}

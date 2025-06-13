@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Enviar mensaje{% endblock %}
+
+{% block content %}
+<div class="bg-dark text-light p-4 rounded shadow">
+  <h2 class="mb-4">Enviar mensaje</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+      {{ form.receiver.label_tag }}
+      {{ form.receiver }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.subject.label_tag }}
+      {{ form.subject }}
+    </div>
+
+    <div class="mb-3">
+      {{ form.body.label_tag }}
+      {{ form.body }}
+    </div>
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
+{% endblock %}

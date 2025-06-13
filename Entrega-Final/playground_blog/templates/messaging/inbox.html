@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Mensajes - PyShare{% endblock %}
+
+{% block content %}
+<div class="bg-dark text-light p-4 rounded shadow">
+  <h2 class="mb-4">📥 Bandeja de entrada</h2>
+  <a href="{% url 'send_message' %}" class="btn btn-outline-success mb-4">Nuevo mensaje</a>
+
+  {% if messages %}
+    <ul class="list-group">
+      {% for message in messages %}
+        <li class="list-group-item {% if not message.is_read %}fw-bold{% endif %} bg-dark text-light border-secondary">
+          <a href="{% url 'message_detail' message.pk %}" class="text-decoration-none text-light">
+            {{ message.subject }} - de {{ message.sender.username }} ({{ message.date_sent|date:"d M Y H:i" }})
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No hay mensajes aún.</p>
+  {% endif %}
+</div>
+{% endblock %}
